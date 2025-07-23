@@ -45,37 +45,42 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  /* Cardboard theme colors based on PRD */
+  --background: #fffaf0; /* Off white background */
+  --foreground: #4b5563; /* Main text color */
+  --card: #fef3c7; /* Card background (cream yellow) */
+  --card-foreground: #4b5563; /* Card text */
+  --popover: #fef3c7;
+  --popover-foreground: #4b5563;
+  --primary: #fbbf24; /* Honey orange primary */
+  --primary-foreground: #4b5563; /* Dark text on orange */
+  --secondary: #fde68a; /* Cream yellow secondary */
+  --secondary-foreground: #4b5563;
+  --muted: #fef3c7;
+  --muted-foreground: #9ca3af; /* Secondary text color */
+  --accent: #fbbf24; /* Same as primary for accent */
+  --accent-foreground: #4b5563;
+  --destructive: #ef4444; /* Error red */
+  --destructive-foreground: white;
+  --border: #fcd34d; /* Border color (light orange) */
+  --input: #fcd34d;
+  --ring: #fbbf24; /* Focus ring */
+  --success: #34d399; /* Success green */
+  --warning: #f59e0b; /* Warning orange */
+  --info: #60a5fa; /* Info blue */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #fef3c7;
+  --sidebar-foreground: #4b5563;
+  --sidebar-primary: #fbbf24;
+  --sidebar-primary-foreground: #4b5563;
+  --sidebar-accent: #fde68a;
+  --sidebar-accent-foreground: #4b5563;
+  --sidebar-border: #fcd34d;
+  --sidebar-ring: #fbbf24;
 }
 
 .dark {
@@ -118,5 +123,75 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Quicksand', 'Noto Sans TC', sans-serif;
+  }
+}
+
+@layer components {
+  /* Cardboard furniture theme components */
+  .cardboard-card {
+    @apply bg-card border-border rounded-xl p-5 shadow-sm transition-all duration-300;
+  }
+  
+  .cardboard-card:hover {
+    @apply shadow-md transform -translate-y-1 scale-105;
+  }
+  
+  .cardboard-btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .cardboard-btn-primary:hover {
+    @apply brightness-110 transform -translate-y-0.5 shadow-md;
+  }
+  
+  .cardboard-btn-secondary {
+    @apply border border-primary text-primary bg-transparent px-4 py-2 rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .cardboard-btn-secondary:hover {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .cardboard-input {
+    @apply w-full px-3 py-2 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-ring transition-colors;
+  }
+  
+  .cardboard-hero {
+    @apply bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8;
+  }
+  
+  .cardboard-price {
+    @apply text-primary font-bold text-lg;
+  }
+  
+  .cardboard-badge-success {
+    @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .cardboard-badge-warning {
+    @apply bg-muted text-muted-foreground px-2 py-1 rounded-full text-sm font-medium;
+  }
+}
+
+@layer utilities {
+  /* Custom animations for cardboard theme */
+  .cardboard-bounce {
+    animation: cardboard-bounce 0.3s ease-in-out;
+  }
+  
+  @keyframes cardboard-bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .cardboard-shake {
+    animation: cardboard-shake 0.5s ease-in-out;
+  }
+  
+  @keyframes cardboard-shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
   }
 }
