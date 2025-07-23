@@ -1,0 +1,107 @@
+name: 🐛 Bug Report
+description: 回報你在開發過程中遇到的問題
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝你回報問題！請盡可能提供詳細資訊，幫助我們快速解決。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題描述
+      description: 清楚描述你遇到的問題
+      placeholder: |
+        當我嘗試...
+        發生了...
+        但我預期應該...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 重現步驟
+      description: 請提供詳細的重現步驟
+      placeholder: |
+        1. 前往 '...' 頁面
+        2. 點擊 '...' 按鈕
+        3. 輸入 '...'
+        4. 看到錯誤
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 預期行為
+      description: 描述你預期應該發生的行為
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 實際行為
+      description: 描述實際發生的行為
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 相關元件
+      description: 問題發生在哪個部分？
+      multiple: true
+      options:
+        - UI Components (Shadcn/UI)
+        - API Routes
+        - 頁面路由
+        - 樣式 (Tailwind CSS)
+        - TypeScript 類型
+        - 資料獲取
+        - 狀態管理
+        - 測試相關
+        - 其他
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: 錯誤訊息
+      description: 如果有錯誤訊息，請貼在這裡
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截圖
+      description: 如果有相關截圖，請在這裡上傳
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 瀏覽器
+      description: 在哪些瀏覽器上測試過？
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - 其他
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js 版本
+      description: 你使用的 Node.js 版本 (執行 `node -v`)
+      placeholder: v20.0.0
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他資訊
+      description: 任何其他有助於解決問題的資訊

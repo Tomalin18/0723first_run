@@ -1,0 +1,131 @@
+name: 🚀 Performance Issue
+description: 回報效能問題或優化建議
+title: "[Performance]: "
+labels: ["performance", "optimization", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        效能很重要！請幫助我們找出並解決效能瓶頸。
+
+  - type: textarea
+    id: performance-issue
+    attributes:
+      label: 效能問題描述
+      description: 詳細描述你遇到的效能問題
+      placeholder: |
+        當我...時
+        頁面載入需要...秒
+        操作反應很慢...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 問題類型
+      description: 什麼類型的效能問題？
+      multiple: true
+      options:
+        - 頁面載入緩慢
+        - 互動延遲
+        - 動畫卡頓
+        - API 回應慢
+        - 記憶體使用過高
+        - CPU 使用率高
+        - 打包體積過大
+        - 圖片載入問題
+        - 其他
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟
+      description: 如何重現這個效能問題？
+      placeholder: |
+        1. 開啟...頁面
+        2. 執行...操作
+        3. 觀察到...
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 效能指標
+      description: 如果有具體的效能數據，請提供
+      placeholder: |
+        LCP: ...秒
+        FID: ...毫秒
+        CLS: ...
+        載入時間: ...秒
+        Bundle 大小: ...KB
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 發生頻率
+      description: 這個問題多常發生？
+      options:
+        - 總是發生
+        - 經常發生
+        - 偶爾發生
+        - 特定條件下發生
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境資訊
+      description: 提供相關環境資訊
+      placeholder: |
+        瀏覽器: Chrome 120
+        裝置: MacBook Pro M1
+        網路: 4G/WiFi
+        螢幕解析度: 1920x1080
+
+  - type: textarea
+    id: profiling
+    attributes:
+      label: 效能分析
+      description: 如果有進行效能分析，請分享結果（Chrome DevTools、Lighthouse 等）
+
+  - type: textarea
+    id: suspected-cause
+    attributes:
+      label: 可能原因
+      description: 你認為是什麼造成效能問題？
+      placeholder: |
+        可能是因為...
+        我注意到...
+        當...時特別明顯
+
+  - type: textarea
+    id: optimization-suggestion
+    attributes:
+      label: 優化建議
+      description: 你有什麼優化建議嗎？
+      placeholder: |
+        可以考慮使用...
+        或許可以優化...
+        建議實施...
+
+  - type: checkboxes
+    id: tried-solutions
+    attributes:
+      label: 已嘗試的解決方案
+      options:
+        - label: 清除快取
+          required: false
+        - label: 使用無痕模式
+          required: false
+        - label: 停用擴充功能
+          required: false
+        - label: 使用生產環境測試
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他資訊
+      description: 任何其他有助於診斷的資訊

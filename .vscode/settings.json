@@ -1,0 +1,18 @@
+{
+  "cSpell.words": [
+    "anthropics",
+    "shadcn",
+    "tailwindcss",
+    "clsx",
+    "twMerge",
+    "prd",
+    "Vibe",
+    "Coder"
+  ],
+  "yaml.customTags": [
+    "!reference sequence"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml"
+  }
+}

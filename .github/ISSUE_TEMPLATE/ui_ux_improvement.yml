@@ -1,0 +1,127 @@
+name: 🎨 UI/UX Improvement
+description: 提出介面或使用體驗的改進建議
+title: "[UI/UX]: "
+labels: ["ui/ux", "enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        讓我們一起打造更好的使用體驗！
+
+  - type: textarea
+    id: current-experience
+    attributes:
+      label: 目前體驗
+      description: 描述目前的介面或體驗問題
+      placeholder: |
+        目前的介面...
+        使用者需要...
+        這樣的流程讓人感到...
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement-suggestion
+    attributes:
+      label: 改進建議
+      description: 你建議如何改進？
+      placeholder: |
+        建議可以...
+        這樣改進後...
+        使用者體驗會...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-area
+    attributes:
+      label: 改進範圍
+      description: 這個改進涉及哪些方面？
+      multiple: true
+      options:
+        - 視覺設計
+        - 互動流程
+        - 響應式設計
+        - 動畫效果
+        - 顏色主題
+        - 字型排版
+        - 圖標使用
+        - 表單設計
+        - 導航結構
+        - 錯誤提示
+        - 載入狀態
+        - 空狀態設計
+        - 無障礙設計
+        - 深色模式
+
+  - type: dropdown
+    id: affected-components
+    attributes:
+      label: 涉及元件
+      description: 需要調整哪些 Shadcn/UI 元件？
+      multiple: true
+      options:
+        - Button
+        - Card
+        - Dialog
+        - Form
+        - Input
+        - Navigation
+        - Table
+        - Alert
+        - Badge
+        - 其他元件
+        - 需要新元件
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: 使用者影響
+      description: 這個改進對使用者有什麼好處？
+      placeholder: |
+        使用者可以更快速地...
+        降低了...的學習成本
+        提升了...的滿意度
+
+  - type: textarea
+    id: design-reference
+    attributes:
+      label: 設計參考
+      description: 提供設計稿、參考網站或截圖
+      placeholder: |
+        可以參考...網站的設計
+        附上 Figma 連結...
+        類似這個效果...
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: 裝置類型
+      description: 這個改進主要針對哪些裝置？
+      multiple: true
+      options:
+        - 桌面版
+        - 平板
+        - 手機
+        - 所有裝置
+
+  - type: checkboxes
+    id: accessibility
+    attributes:
+      label: 無障礙考量
+      options:
+        - label: 已考慮鍵盤導航
+          required: false
+        - label: 已考慮螢幕閱讀器
+          required: false
+        - label: 已考慮色彩對比
+          required: false
+        - label: 已考慮字體大小
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他補充
+      description: 任何其他想法或建議

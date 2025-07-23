@@ -1,0 +1,112 @@
+name: 📚 Documentation Update
+description: 建議文檔改進或回報文檔問題
+title: "[Docs]: "
+labels: ["documentation", "good first issue"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        好的文檔讓開發更順暢！感謝你幫助改進文檔。
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 文檔類型
+      description: 這涉及哪種文檔？
+      options:
+        - README.md
+        - CLAUDE.md
+        - PRD.md
+        - API 文檔 (api_docs.md)
+        - 程式碼風格指南 (coding_style.md)
+        - 資料庫架構 (db_schema.md)
+        - 元件文檔 (shadcn_components.md)
+        - 樣式指南 (style_guide.md)
+        - Claude 互動指南 (claude_interaction_guide.md)
+        - 其他文檔
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-category
+    attributes:
+      label: 問題類別
+      description: 什麼類型的文檔問題？
+      options:
+        - 錯誤資訊
+        - 缺少說明
+        - 過時內容
+        - 不清楚的描述
+        - 缺少範例
+        - 格式問題
+        - 連結失效
+        - 新增內容建議
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: 目前內容
+      description: 引用目前有問題的文檔內容（如適用）
+      placeholder: |
+        在 README.md 第 20 行：
+        "使用 npm run dev 啟動開發伺服器"
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 問題描述
+      description: 詳細說明文檔的問題
+      placeholder: |
+        這個說明缺少了...
+        這裡的資訊已經過時...
+        這個範例無法正常運作...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 建議改進
+      description: 你建議如何改進這個文檔？
+      placeholder: |
+        建議改為...
+        應該加入...的說明
+        需要提供...的範例
+    validations:
+      required: true
+
+  - type: textarea
+    id: code-examples
+    attributes:
+      label: 程式碼範例
+      description: 如果需要新增或修改程式碼範例，請提供
+      render: typescript
+
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: 目標讀者
+      description: 這個文檔主要是給誰看的？
+      multiple: true
+      options:
+        - Vibe Coder 新手
+        - 有經驗的開發者
+        - 專案維護者
+        - UI/UX 設計師
+        - 測試人員
+        - 所有人
+
+  - type: checkboxes
+    id: pr-willing
+    attributes:
+      label: 參與貢獻
+      options:
+        - label: 我願意提交 PR 來改進這個文檔
+          required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 其他背景
+      description: 任何其他有助於理解的資訊

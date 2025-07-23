@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 討論區
+    url: https://github.com/yourusername/vibe-template/discussions
+    about: 對於一般問題和討論，請使用 GitHub Discussions
+  - name: 🤝 社群支援
+    url: https://discord.gg/your-discord
+    about: 加入我們的 Discord 社群獲得即時幫助
+  - name: 📖 文檔
+    url: https://github.com/yourusername/vibe-template/tree/main/docs
+    about: 查看完整的專案文檔
+EOF < /dev/null

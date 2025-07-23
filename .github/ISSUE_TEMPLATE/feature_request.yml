@@ -1,0 +1,96 @@
+name: ✨ Feature Request
+description: 提出新功能或改進建議
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝你的建議！請詳細描述你想要的功能。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 問題描述
+      description: 這個功能要解決什麼問題？
+      placeholder: |
+        我經常需要...
+        但目前系統無法...
+        這讓我感到...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建議解決方案
+      description: 描述你想要的解決方案
+      placeholder: |
+        我希望能夠...
+        這樣可以...
+        使用起來會像...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案
+      description: 你有考慮過其他解決方案嗎？
+      placeholder: 也可以考慮...
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: 功能類型
+      description: 這是什麼類型的功能？
+      options:
+        - 新增頁面/路由
+        - 新增 UI 元件
+        - 新增 API 端點
+        - 改進現有功能
+        - 整合第三方服務
+        - 開發工具改進
+        - 效能優化
+        - 其他
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先級
+      description: 你認為這個功能有多重要？
+      options:
+        - 🔴 關鍵 - 阻礙開發
+        - 🟡 重要 - 顯著提升體驗
+        - 🟢 一般 - 錦上添花
+        - ⚪ 低 - 有會更好
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 使用場景
+      description: 請提供具體的使用場景
+      placeholder: |
+        場景 1: 當用戶...
+        場景 2: 在開發...
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: 設計稿/原型
+      description: 如果有設計稿、線框圖或參考連結，請提供
+
+  - type: checkboxes
+    id: pr-willing
+    attributes:
+      label: 參與貢獻
+      options:
+        - label: 我願意提交 PR 來實現這個功能
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他資訊
+      description: 任何其他相關資訊

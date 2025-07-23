@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "經典白色運動鞋",
+    "price_in_cents": 298000,
+    "image_url": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400&h=400&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "極簡主義皮革錢包",
+    "price_in_cents": 158000,
+    "image_url": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&h=400&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "復古圓框太陽眼鏡",
+    "price_in_cents": 89900,
+    "image_url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&auto=format&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "北歐風格陶瓷馬克杯",
+    "price_in_cents": 35900,
+    "image_url": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&auto=format&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "手工編織羊毛圍巾",
+    "price_in_cents": 128000,
+    "image_url": "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400&h=400&auto=format&fit=crop"
+  }
+]
